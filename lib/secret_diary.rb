@@ -21,18 +21,18 @@ end
 
 class Locked
   def initialize
-    @locked = "locked"
+    @locked = true
   end
 
   def unlock
-    @security = "unlock"
+    @locked = false
   end
 
   def lock
-    @security = "lock"
+    @locked = true
   end
 
   def locked?
-    @locked == "locked"
+    @locked
   end
 end

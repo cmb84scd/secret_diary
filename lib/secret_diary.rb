@@ -1,5 +1,9 @@
 class SecretDiary
   def unlock
-    'unlock'
+    "unlock"
+  end
+
+  def lock
+    "lock"
   end
 end

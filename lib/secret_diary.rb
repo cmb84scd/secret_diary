@@ -17,6 +17,10 @@ class SecretDiary
     fail "Diary is locked, unable to add entry" if locked?
   end
 
+  def get_entries
+    fail "Diary is locked, unable to get entries" if locked?
+  end
+
   private
   def locked?
     @security == "locked"

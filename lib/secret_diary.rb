@@ -1,10 +1,16 @@
 class SecretDiary
+  attr_reader :security
+
+  def initialize
+    @security = 'locked'
+  end
+
   def unlock
-    "unlock"
+    @security = "unlock"
   end
 
   def lock
-    "lock"
+    @security = "lock"
   end
 
   def add_entry

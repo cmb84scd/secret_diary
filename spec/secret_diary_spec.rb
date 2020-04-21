@@ -12,4 +12,10 @@ describe SecretDiary do
       expect(subject.lock).to eq 'lock'
     end
   end
+
+  describe 'add_entry' do
+    it 'adds an entry to the diary' do
+      expect(subject.add_entry).to eq 'entry added'
+    end
+  end
 end

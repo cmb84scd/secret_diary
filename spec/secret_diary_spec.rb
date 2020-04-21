@@ -14,8 +14,8 @@ describe SecretDiary do
   end
 
   describe 'add_entry' do
-    it 'adds an entry to the diary' do
-      expect(subject.add_entry).to eq 'entry added'
+    it 'raises an error if diary is locked' do
+      expect { subject.add_entry }.to raise_error("Diary is locked, unable to add entry")
     end
   end
 end
